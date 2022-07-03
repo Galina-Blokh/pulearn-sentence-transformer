@@ -31,6 +31,7 @@ classify the following tweets as positive:
 ├── data_creation.py                <-- All preprocesses and processes  functions are here
 ├── app.py                          <-- main python flask application
 ├── log_file.txt                    <-- The application will logging in this file
+├── requirements.txt                <-- The list of mandatory python libraries and versions
 ├── README.md                       <-- Documentation to use this repository
 ```
 
