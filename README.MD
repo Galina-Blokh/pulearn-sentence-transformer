@@ -28,7 +28,7 @@ or
 http://127.0.0.1:5000/predict?twitts=[%22they%20were%20kicking%20him%20in%20the%20yard%22,%20%22we%20got%20involved%20in%20a%20fight%22,%22there%20was%20blood%20everywhere%22]
 ```
 <br>You should have a dataset with embeddings in the `/data_models` folder.
-<br>Before Step 4 you can create a data set with enbeddings via googlecolab notebook.
+<br>Before Step 5 you can create a data set with enbeddings via googlecolab notebook.
 All code can be found in GoogleCollab notebook with some explanations:
 ```python
 https://colab.research.google.com/drive/1MgzivO1sEkSFk-FYnGurVKysNu27popA?usp=sharing
@@ -44,12 +44,11 @@ https://colab.research.google.com/drive/1MgzivO1sEkSFk-FYnGurVKysNu27popA?usp=sh
 
 <br>***Here starts the flask application run***
 
-5. The request is 
-6. The next step is to create Nearest neighbour database/dataset with `create_nn_db(corpus_embeddings, query_embeddings)` function. It will label 25% of true positives samples with 1 and the rest 75% of samples will be unknown and marked with -1.
+5. The next step is to create Nearest neighbour database/dataset with `create_nn_db(corpus_embeddings, query_embeddings)` function. It will label 25% of true positives samples with 1 and the rest 75% of samples will be unknown and marked with -1.
 <br>It will call `get_samples()` function to sample positive example using the nearest neighbour DB (Based on input sentences) and negative examples
-7. On this Step we Train an SVC model for ElkanotoPuClassifier from [pulearn](https://pulearn.github.io/pulearn/) library  leveraging the untagged data.
-8. Evaluation is done in function `evaluate_results()` with regular scikit-learn library: F1, ROC AUC, Recall and Precision scores. <br> It will be visible in the `log_file.txt`.
-9. The Response will Show top-100 most similar for input sentences results. 
+6. On this Step we Train an SVC model for ElkanotoPuClassifier from [pulearn](https://pulearn.github.io/pulearn/) library  leveraging the untagged data.
+7. Evaluation is done in function `evaluate_results()` with regular scikit-learn library: F1, ROC AUC, Recall and Precision scores. <br> It will be visible in the `log_file.txt`.
+8. The Response will Show top-100 most similar for input sentences results. 
 
 Every operation and calculation results will be logged in the `log_file.txt` in the project directory.
 
