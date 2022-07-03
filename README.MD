@@ -19,7 +19,21 @@ classify the following tweets as positive:
 ```
 
 # Project run  descriptions
+
 ### Flask
+#### Content structure
+```python
+├── /data_models
+│   ├── corpus_embeddings.pt        <-- Here you should place your dataset with corpus embeddings
+│   ├── query_embeddings.pt         <-- Here you should place your dataset with query embedding
+│ 
+├── config.py                       <-- Constants and configurations
+├── data_creation.py                <-- All preprocesses and processes  functions are here
+├── app.py                          <-- main python flask application
+├── log_file.txt                    <-- The application will logging in this file
+├── README.md                       <-- Documentation to use this repository
+```
+
 This is a flask application starting from Step 4. To run it locally use `python app.py`  command from command line. 
 <br>To pass a request use a browser or Postman application. The format of the URL to pass a request is:
 ```python
